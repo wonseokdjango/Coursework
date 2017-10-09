@@ -30,7 +30,10 @@ public:
   static void connectFailure(State* _root);
 };
 
-void BakerBird(const State* _root, const unsigned int _textSize, const char (*_text)[101]);
+void BakerBird(
+    const State* _root,
+    const vector<unsigned int>& _columnPattern,
+    const unsigned int _textSize, const char (*_text)[101]);
 
 int main(int _argc, char* _argv[]) {
 
@@ -79,10 +82,15 @@ int main(int _argc, char* _argv[]) {
 
   State::connectFailure(root);
 
-  // Execute BakerBird algorithm
-  BakerBird(root, textSize, text);
+  // Get column pattern
+  vector<unsigned int> columnPattern;
+  for (int pRow = 0; pRow < patternSize; ++pRow)
+    columnPattern.push_back(distincts.find(pattern[pRow])->second);
 
-  // free resources.
+  // Execute BakerBird algorithm
+  BakerBird(root, columnPattern, textSize, text);
+
+  // Free resources.
   delete root;
 
   return 0;
@@ -169,11 +177,15 @@ void State::connectFailure(State *_root) {
 
 /**
 *@Brief Baker Bird 2d pattern matching algorithm
-*@Param[in] _root     Root of automaton
-*@Param[in] _textSize Size of text
-*@Param[in] _text     Text
+*@Param[in] _root           Root of automaton
+*@Param[in] _columnPattern  Column pattern
+*@Param[in] _textSize       Size of text
+*@Param[in] _text           Text
 */
-void BakerBird(const State* _root, const unsigned int _textSize, const char (*_text)[101]) {
+void BakerBird(
+    const State* _root,
+    const vector<unsigned int>& _columnPattern,
+    const unsigned int _textSize, const char (*_text)[101]) {
 
   for (int tRow = 0; tRow < _textSize; ++tRow) {
     const State *current = _root;
