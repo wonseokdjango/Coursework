@@ -4,6 +4,8 @@
 *@Brief   Baker-Bird 2d pattern matching algorithm is implemented at this file
 */
 
+#define WSDBG
+
 #include <cstdio>
 #include <cstdlib>
 #include <set>
@@ -30,9 +32,12 @@ public:
   static void connectFailure(State* _root);
 };
 
+vector<unsigned int> KMPTable(const vector<unsigned int>& _pattern);
+
 void BakerBird(
     const State* _root,
     const vector<unsigned int>& _columnPattern,
+    const vector<unsigned int>& _columnPartial,
     const unsigned int _textSize, const char (*_text)[101]);
 
 int main(int _argc, char* _argv[]) {
@@ -87,8 +92,31 @@ int main(int _argc, char* _argv[]) {
   for (int pRow = 0; pRow < patternSize; ++pRow)
     columnPattern.push_back(distincts.find(pattern[pRow])->second);
 
+  // Get KMP partial matching table of column pattern
+  vector<unsigned int> columnPartial = KMPTable(columnPattern);
+
+#ifdef WSDBG
+for (int dbg = 0; dbg < 10; ++dbg) {
+
+  printf("pattern : ");
+  for (int pRow = 0; pRow < patternSize; ++pRow) {
+    columnPattern[pRow] = rand() % 4;
+    printf("%d ", columnPattern[pRow]);
+  }
+  printf("\n");
+
+  vector<unsigned int> tmp = KMPTable(columnPattern);
+
+  printf("partial : ");
+  for (int pRow = 0; pRow < patternSize; ++pRow)
+    printf("%d ", tmp[pRow]);
+  printf("\n\n");
+
+}
+#endif
+
   // Execute BakerBird algorithm
-  BakerBird(root, columnPattern, textSize, text);
+  BakerBird(root, columnPattern, columnPartial, textSize, text);
 
   // Free resources.
   delete root;
@@ -176,15 +204,46 @@ void State::connectFailure(State *_root) {
 }
 
 /**
+*@Brief     Return KMP partial matching table with pattern _pattern
+*@Param[in] _pattern  Pattern which consists of uint32
+*@Return    Partial matching table of _pattern
+*/
+vector<unsigned int> KMPTable(const vector<unsigned int>& _pattern) {
+  vector<unsigned int> ret(_pattern.size(), 0);
+
+  unsigned int begin = 1;
+  unsigned int matched = 0;
+
+  while (begin + matched < _pattern.size()) {
+    if (_pattern[begin + matched] == _pattern[matched]) {
+      ++matched;
+      ret[begin + matched - 1] = matched;
+    }
+    else {
+      if (matched == 0)
+        ++begin;
+      else {
+        begin += matched - ret[matched - 1];
+        matched = ret[matched - 1];
+      }
+    }
+  }
+
+  return ret;
+}
+
+/**
 *@Brief Baker Bird 2d pattern matching algorithm
 *@Param[in] _root           Root of automaton
 *@Param[in] _columnPattern  Column pattern
+*@Param[in] _columnPartial  Partial matching table of _columnPattern
 *@Param[in] _textSize       Size of text
 *@Param[in] _text           Text
 */
 void BakerBird(
     const State* _root,
     const vector<unsigned int>& _columnPattern,
+    const vector<unsigned int>& _columnPartial,
     const unsigned int _textSize, const char (*_text)[101]) {
 
   for (int tRow = 0; tRow < _textSize; ++tRow) {
