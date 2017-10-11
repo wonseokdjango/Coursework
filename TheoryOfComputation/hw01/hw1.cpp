@@ -35,6 +35,7 @@ public:
 vector<unsigned int> KMPTable(const vector<unsigned int>& _pattern);
 
 void BakerBird(
+    FILE* _fpOut,
     const State* _root,
     const vector<unsigned int>& _columnPattern,
     const vector<unsigned int>& _columnPartial,
@@ -54,8 +55,14 @@ int main(int _argc, char* _argv[]) {
   char text[100][101];
   char pattern[100][101];
   
-  FILE *fpIn = fopen(_argv[1], "r");
+  FILE* fpIn = fopen(_argv[1], "r");
   if (fpIn == NULL) {
+    printf("file open failed\n");
+    exit(-1);
+  }
+
+  FILE* fpOut = fopen(_argv[2], "w");
+  if (fpOut == NULL) {
     printf("file open failed\n");
     exit(-1);
   }
@@ -96,10 +103,12 @@ int main(int _argc, char* _argv[]) {
   vector<unsigned int> columnPartial = KMPTable(columnPattern);
 
   // Execute BakerBird algorithm
-  BakerBird(root, columnPattern, columnPartial, textSize, text);
+  BakerBird(fpOut, root, columnPattern, columnPartial, textSize, text);
 
   // Free resources.
   delete root;
+
+  fclose(fpOut);
 
   return 0;
 }
@@ -214,6 +223,7 @@ vector<unsigned int> KMPTable(const vector<unsigned int>& _pattern) {
 
 /**
 *@Brief Baker Bird 2d pattern matching algorithm
+*@Param[in] _fpOut          File descriptor for output
 *@Param[in] _root           Root of automaton
 *@Param[in] _columnPattern  Column pattern
 *@Param[in] _columnPartial  Partial matching table of _columnPattern
@@ -221,6 +231,7 @@ vector<unsigned int> KMPTable(const vector<unsigned int>& _pattern) {
 *@Param[in] _text           Text
 */
 void BakerBird(
+    FILE* _fpOut,
     const State* _root,
     const vector<unsigned int>& _columnPattern,
     const vector<unsigned int>& _columnPartial,
@@ -256,7 +267,7 @@ void BakerBird(
           if (kmpMatched[kmpIdx] < _columnPattern.size() && row[kmpIdx] == _columnPattern[kmpMatched[kmpIdx]]) {
             ++kmpMatched[kmpIdx];
             if (kmpMatched[kmpIdx] == _columnPattern.size())
-              printf("%d %d\n", tRow, kmpIdx);
+              fprintf(_fpOut, "%d %d\n", tRow, kmpIdx);
           }
           else {
             if (kmpMatched[kmpIdx] == 0)

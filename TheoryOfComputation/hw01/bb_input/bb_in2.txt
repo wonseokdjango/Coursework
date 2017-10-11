@@ -1,0 +1,15 @@
+2 12
+ac
+cb
+bbbbcbbababb
+cccbabcbabcb
+bbacacaccbbb
+cabbacaacaca
+bbcbbbacaacc
+bacbbbccbbba
+bcacaaabacab
+babccacbabcc
+cbccaccbbaac
+cabcaabcbcca
+abbbcabaccaa
+bacaaaaacccc

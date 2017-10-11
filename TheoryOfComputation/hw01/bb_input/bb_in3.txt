@@ -1,0 +1,20 @@
+1 18
+c
+bababaccbbbcabcbac
+baaccbbbbccabaabbc
+bbcccbcacbbcbabcaa
+bcccbbcbcbabbbcacb
+cbbcbbcccbccbacabb
+cbcbccabccccbcbbbc
+abccababcacbbcccca
+bcbbabacacbabccbaa
+aacaaacbabbcbacaca
+bacaacbcbabbbcccac
+aacabaabbabbaacaba
+ccccbbaabaccaccaab
+bbcabbcccbccbabcca
+aababbcacaaaccbbaa
+accabbcaccccabbcba
+bbabbbbaaccacabcca
+bcabcbbaacccabbbca
+cbbbaccacaabacccbb

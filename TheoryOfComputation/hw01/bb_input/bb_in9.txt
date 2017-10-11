@@ -1,0 +1,9 @@
+2 6
+bc
+bb
+cbaacc
+ccacba
+aaabcc
+acccbc
+acccbb
+aacbcc
