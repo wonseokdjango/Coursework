@@ -95,26 +95,6 @@ int main(int _argc, char* _argv[]) {
   // Get KMP partial matching table of column pattern
   vector<unsigned int> columnPartial = KMPTable(columnPattern);
 
-#ifdef WSDBG
-for (int dbg = 0; dbg < 10; ++dbg) {
-
-  printf("pattern : ");
-  for (int pRow = 0; pRow < patternSize; ++pRow) {
-    columnPattern[pRow] = rand() % 4;
-    printf("%d ", columnPattern[pRow]);
-  }
-  printf("\n");
-
-  vector<unsigned int> tmp = KMPTable(columnPattern);
-
-  printf("partial : ");
-  for (int pRow = 0; pRow < patternSize; ++pRow)
-    printf("%d ", tmp[pRow]);
-  printf("\n\n");
-
-}
-#endif
-
   // Execute BakerBird algorithm
   BakerBird(root, columnPattern, columnPartial, textSize, text);
 
@@ -246,6 +226,9 @@ void BakerBird(
     const vector<unsigned int>& _columnPartial,
     const unsigned int _textSize, const char (*_text)[101]) {
 
+  vector<unsigned int> kmpBegin(_textSize, 0);
+  vector<unsigned int> kmpMatched(_textSize, 0);
+
   for (int tRow = 0; tRow < _textSize; ++tRow) {
     const State *current = _root;
     vector<unsigned int> row(_textSize, 0);
@@ -263,6 +246,30 @@ void BakerBird(
         row[tCol] = *(current->output.begin());
     }
 
-    // TODO
+    // Run _textSize KMPs
+    for (int kmpIdx = 0; kmpIdx < _textSize; ++kmpIdx) {
+
+      if (kmpBegin[kmpIdx] + _columnPattern.size() <= _textSize) {
+
+        unsigned int toSee = kmpBegin[kmpIdx] + kmpMatched[kmpIdx]; 
+        while (toSee == tRow) {
+          if (kmpMatched[kmpIdx] < _columnPattern.size() && row[kmpIdx] == _columnPattern[kmpMatched[kmpIdx]]) {
+            ++kmpMatched[kmpIdx];
+            if (kmpMatched[kmpIdx] == _columnPattern.size())
+              printf("%d %d\n", tRow, kmpIdx);
+          }
+          else {
+            if (kmpMatched[kmpIdx] == 0)
+              ++kmpBegin[kmpIdx];
+            else {
+              kmpBegin[kmpIdx] += kmpMatched[kmpIdx] - _columnPartial[kmpMatched[kmpIdx] - 1];
+              kmpMatched[kmpIdx] = _columnPartial[kmpMatched[kmpIdx] - 1];
+            }
+          }
+
+          toSee = kmpBegin[kmpIdx] + kmpMatched[kmpIdx];
+        }
+      }
+    }
   }
 }
