@@ -16,7 +16,7 @@ int main(void) {
     
     FILE *fp = fopen(fname.c_str(), "w");
 
-    int tSize = rand() % 100 + 1;
+    int tSize = rand() % 96 + 5;
     int pSize = rand() % 5 + 1;
 
     fprintf(fp, "%d %d\n", pSize, tSize);

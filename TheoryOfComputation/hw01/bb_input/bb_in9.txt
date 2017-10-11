@@ -1,9 +1,23 @@
-2 6
-bc
-bb
-cbaacc
-ccacba
-aaabcc
-acccbc
-acccbb
-aacbcc
+5 17
+abaca
+cbbbb
+babba
+cabac
+abccc
+acabbabccbabacccb
+abcbaccbcaaccccaa
+abcbbbbcccccbaaac
+cbcbbccbbcbbaabbc
+baaaaaccabcacccbb
+cabbbabacbbaaaccb
+ccccccbcaacacbcca
+bbbaaaabbaaccbccc
+ccbbbccaaaacabbac
+caaccbaaaaaaacaca
+bbabaabaacbccbbab
+aaaabcbbacaacbcbb
+abcacacacccbabcab
+ccacaacbbcbaaacca
+cbbccabbcbcbcabcc
+bcabccaaabaaabcbc
+caaacccbbccabcbba
