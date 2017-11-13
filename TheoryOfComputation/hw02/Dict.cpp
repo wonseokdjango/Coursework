@@ -14,13 +14,13 @@
 Trie::Trie(void)
 {
   code = 0;
-  for (u32t idx = 0; idx <= 255; ++idx)
+  for (u32t idx = 0; idx <= 127; ++idx)
     next[idx] = 0;
 }
 
 Trie::~Trie(void)
 {
-  for (u32t idx = 0; idx <= 255; ++idx)
+  for (u32t idx = 0; idx <= 127; ++idx)
   {
     if (next[idx])
       delete next[idx];
@@ -29,15 +29,15 @@ Trie::~Trie(void)
 
 Dict::Dict(void)
 {
-  maxCode = 256; // LZW code starts from Max(ASCII) + 1
+  maxCode = 128; // LZW code starts from Max(ASCII) + 1
 
   root = new Trie();
 
-  for (u32t ch = 0; ch <= 255; ++ch)
+  for (u32t ch = 0; ch <= 127; ++ch)
   {
     root->next[ch] = new Trie();
     root->next[ch]->code = ch;
-    
+
     codeMap.insert(std::pair<u16t, std::string>(ch, std::string(1, ch)));
   }
 }
@@ -79,9 +79,12 @@ std::string Dict::decode(const u16t* _text)
   if (((s16t)_text[1]) == EOF)
     return prev;
 
-  std::string next = codeMap.find(_text[1])->second;
+  std::string toAdd;
+  if (codeMap.find(_text[1]) == codeMap.end())
+    toAdd = prev + prev.substr(0, 1);
+  else
+    toAdd = prev + codeMap.find(_text[1])->second.substr(0, 1);
 
-  std::string toAdd = prev + next.substr(0, 1);
   for (u32t idx = 0; idx < toAdd.size(); ++idx)
   {
     if (current->next[toAdd[idx]] == NULL)

@@ -55,9 +55,10 @@ void LZW::LZWDec(const char* fnameEnc, const char* fnameDec)
 
   Dict* dict = new Dict();
 
-  for (u32t pos = 0; ((short)buffer16[pos]) != EOF; ++pos)
+  for (u32t pos = 0; ((s16t)buffer16[pos]) != EOF; ++pos)
   {
-    std::string ret = dict->decode(buffer16 + pos);  
+    std::string ret = dict->decode(buffer16 + pos);
+
     fprintf(fpDec, "%s", ret.c_str());
   }
 

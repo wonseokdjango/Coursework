@@ -17,7 +17,7 @@ class Trie
 {
 public:
   u16t code;
-  Trie* next[256];
+  Trie* next[128];
 
   Trie(void);
   ~Trie(void);
