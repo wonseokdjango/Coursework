@@ -1,0 +1,29 @@
+#!/bin/bash
+
+make
+
+echo
+
+./go $1 $2 $3
+
+echo
+
+ls -al $2
+
+echo
+
+echo diff $1 $3
+
+echo
+
+if [ $# -eq 4 ] && [ "$4" = "-e" ];
+then
+  echo -e "BELOW is origin"
+  fold -s -w40 $1
+  echo
+  echo -e "BELOW is decode"
+  fold -s -w40 $3
+  echo
+fi
+
+make clean

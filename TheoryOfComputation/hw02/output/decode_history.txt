@@ -1,0 +1,1000 @@
+ 1583  vi bb_in9.txt 
+ 1584  ls
+ 1585  cd ..
+ 1586  ls
+ 1587  vi bb_input/bb_in9.txt 
+ 1588  ls
+ 1589  cd cc_output/
+ 1590  ls
+ 1591  rm cc_out
+ 1592  rm cc_out.txt 
+ 1593  ls
+ 1594  cd ..
+ 1595  ls
+ 1596  ./run.sh 
+ 1597  ls
+ 1598  cat cc_output/*
+ 1599  ls
+ 1600  cd ..
+ 1601  ls
+ 1602  cd ..
+ 1603  ls
+ 1604  git add *
+ 1605  ls
+ 1606  cd TheoryOfComputation/
+ 1607  ls
+ 1608  cd hw01/
+ 1609  ls
+ 1610  cd bb_input/
+ 1611  ls
+ 1612  cd ..
+ 1613  ls
+ 1614  cd bb_output/
+ 1615  ls
+ 1616  cd ..
+ 1617  ls
+ 1618  cd cc_output/
+ 1619  ls
+ 1620  cd ..
+ 1621  ls
+ 1622  cd ..
+ 1623  ls
+ 1624  cd ..
+ 1625  ls
+ 1626  git add *
+ 1627  ls
+ 1628  ls TheoryOfComputation/hw01/
+ 1629  ls -al TheoryOfComputation/hw01/
+ 1630  ls
+ 1631  git commit -m "[TheoryOfComputation]hw01 - Finished"
+ 1632  git push origin master
+ 1633  ls -al
+ 1634  cd TheoryOfComputation/
+ 1635  ls
+ 1636  cd hw01/
+ 1637  ls
+ 1638  ls -al
+ 1639  cd ..
+ 1640  ls
+ 1641  cd ..
+ 1642  ls
+ 1643  git add *
+ 1644  git add --all
+ 1645  git commit -m "[TheoryOfComputation]hw01 - Cleaned"
+ 1646  git push origin master 
+ 1647  ls
+ 1648  cd ~
+ 1649  ls
+ 1650  cd Git/
+ 1651  ls
+ 1652  cd Coursework/
+ 1653  ls
+ 1654  cd TheoryOfComputation/
+ 1655  ls
+ 1656  cd hw01/
+ 1657  ls
+ 1658  vi README
+ 1659  mv README README.txt
+ 1660  ls
+ 1661  vi README.txt 
+ 1662  cat /etc/issue
+ 1663  vi README.txt 
+ 1664  g++ --version
+ 1665  vi README.txt 
+ 1666  ls
+ 1667  cd ..
+ 1668  ls
+ 1669  cd ..
+ 1670  ls
+ 1671  git add --all
+ 1672  git commit -m "[TheoryOfComputation]hw01 - README.txt is added"
+ 1673  git push origin master 
+ 1674  ls
+ 1675  cd TheoryOfComputation/
+ 1676  ls
+ 1677  cd hw01/
+ 1678  ls
+ 1679  cat bb_output/*
+ 1680  ls
+ 1681  cd bb_input/
+ 1682  ls
+ 1683  vi input_gen.cpp 
+ 1684  mv bb_in0.txt bb_in.txt
+ 1685  ls
+ 1686  g++ -std=c++11 input_gen.cpp 
+ 1687  ./a.out 
+ 1688  ls
+ 1689  rm a.out 
+ 1690  ls
+ 1691  rm bb_in0.txt 
+ 1692  mv bb_in.txt bb_in0.txt
+ 1693  vi bb_in0.txt 
+ 1694  ls
+ 1695  cd ..
+ 1696  ls
+ 1697  ./run.sh 
+ 1698  cat cc_output/*
+ 1699  ls
+ 1700  cd ~/Git/
+ 1701  ls
+ 1702  cd Coursework/
+ 1703  ls
+ 1704  cd TheoryOfComputation/
+ 1705  ls
+ 1706  cd hw01/
+ 1707  ls
+ 1708  cd ..
+ 1709  ls
+ 1710  cd ..
+ 1711  ls
+ 1712  git add --all
+ 1713  git commit -m "[TheoryOfComputation]hw01 - submitted"
+ 1714  cat TheoryOfComputation/hw01/cc_output/*
+ 1715  git push origin master 
+ 1716  exit
+ 1717  vi excel.cpp
+ 1718  g++ excel.cpp 
+ 1719  vi excel.cpp
+ 1720  g++ excel.cpp 
+ 1721  ./a.out > excel.txt
+ 1722  vi excel.txt 
+ 1723  vi excel.cpp 
+ 1724  g++ excel.cpp 
+ 1725  ./a.out > excel.txt
+ 1726  vi excel.txt 
+ 1727  ls
+ 1728  rm excel.cpp excel.txt a.out 
+ 1729  ls
+ 1730  mkdir tmp
+ 1731  ls
+ 1732  cd tmp/
+ 1733  l
+ 1734  ls
+ 1735  vi appendMDPS.cpp
+ 1736  vi replay.txt 
+ 1737  vi appendMDPS.cpp 
+ 1738  g++ appendMDPS.cpp 
+ 1739  vi appendMDPS.cpp 
+ 1740  g++ appendMDPS.cpp 
+ 1741  vi appendMDPS.cpp 
+ 1742  g++ appendMDPS.cpp 
+ 1743  ./a.out 
+ 1744  ls
+ 1745  vi replay_cur.txt 
+ 1746  vi appendMDPS.cpp 
+ 1747  g++ appendMDPS.cpp 
+ 1748  ./a.out 
+ 1749  vi replay_cur.txt 
+ 1750  vi appendMDPS.cpp 
+ 1751  g++ appendMDPS.cpp 
+ 1752  ./a.out 
+ 1753  vi replay_cur.txt 
+ 1754  exit
+ 1755  ls
+ 1756  cd Git/
+ 1757  ls
+ 1758  cd Coursework/
+ 1759  ls
+ 1760  cd TheoryOfComputation/
+ 1761  ls
+ 1762  mkdir hw02
+ 1763  ls
+ 1764  cd hw01/
+ 1765  ls
+ 1766  cd ..
+ 1767  ls
+ 1768  cd hw02/
+ 1769  ls
+ 1770  mkdir src
+ 1771  ls
+ 1772  mkdir input
+ 1773  mkdir output
+ 1774  ls
+ 1775  vi ../hw01/makefile 
+ 1776  ls
+ 1777  rm -rf src/
+ 1778  ls
+ 1779  vi Trie.cpp 
+ 1780  ls
+ 1781  vi main.cpp 
+ 1782  vi Trie.cpp 
+ 1783  vi Trie.hpp 
+ 1784  vi Util.cpp 
+ 1785  rm Util.cpp 
+ 1786  rm Util.hpp 
+ 1787  ls
+ 1788  mv main.cpp hw2.cpp
+ 1789  ls
+ 1790  mv hw2.cpp main.cpp
+ 1791  ls
+ 1792  vi main.cpp 
+ 1793  fmt --width=10 Trie.cpp 
+ 1794  fmt --width=3 Trie.cpp 
+ 1795  fold -s -w3 Trie.cpp 
+ 1796  fold -s -w10 Trie.cpp 
+ 1797  ls
+ 1798  vi test.cpp
+ 1799  g++ test.cpp 
+ 1800  ./a.out 
+ 1801  ls
+ 1802  vi test.txt 
+ 1803  cat test.txt 
+ 1804  fold -s -w10 test.txt 
+ 1805  vi ./input/infile.txt 
+ 1806  ls
+ 1807  fold -s -w10 ./input/infile.txt 
+ 1808  ls
+ 1809  cd Git/
+ 1810  ls
+ 1811  cd Coursework/
+ 1812  ls
+ 1813  cd TheoryOfComputation/
+ 1814  ls
+ 1815  cd hw02/
+ 1816  ls
+ 1817  rm test.cpp 
+ 1818  rm test.txt 
+ 1819  ls
+ 1820  vi main.cpp 
+ 1821  cd ..
+ 1822  ls
+ 1823  vi test.cpp
+ 1824  g++ test.cpp 
+ 1825  vi t.txt
+ 1826  ./a.out
+ 1827  ls
+ 1828  vi tt.txt 
+ 1829  ls
+ 1830  ./a.out 
+ 1831  vi tt.txt 
+ 1832  vi t.txt 
+ 1833  diff t.txt tt.txt 
+ 1834  ls
+ 1835  vi test.cpp 
+ 1836  ls
+ 1837  cat t.txt 
+ 1838  cat tt.txt 
+ 1839  ls
+ 1840  rm a.out test.cpp tt.txt t.txt 
+ 1841  ls
+ 1842  cd hw02/
+ 1843  ls
+ 1844  rm a.out 
+ 1845  ls
+ 1846  vi LZW.cpp 
+ 1847  vi makefile
+ 1848  ls
+ 1849  vi makefile 
+ 1850  vi ~/.vimrc 
+ 1851  vi makefile 
+ 1852  make
+ 1853  vi main.cpp 
+ 1854  vi makefile 
+ 1855  vi ~/.vimrc 
+ 1856  vi main.cpp 
+ 1857  make
+ 1858  vi Trie.cpp 
+ 1859  make
+ 1860  vi Trie.cpp 
+ 1861  make
+ 1862  clear
+ 1863  make
+ 1864  vi LZW.
+ 1865  vi LZW.cpp 
+ 1866  make
+ 1867  make clean
+ 1868  clear
+ 1869  make
+ 1870  ls
+ 1871  vi test.txt
+ 1872  ./hw2 test.txt test1.txt test2.txt
+ 1873  vi main.cpp 
+ 1874  vi LZW.cpp 
+ 1875  make
+ 1876  ./hw2 test.txt test1.txt test2.txt
+ 1877  make
+ 1878  make clean
+ 1879  make
+ 1880  ./hw2 test.txt test1.txt test2.txt
+ 1881  vi LZW.cpp 
+ 1882  make
+ 1883  ./hw2 test.txt test1.txt test2.txt
+ 1884  vi LZW.cpp 
+ 1885  make
+ 1886  ./hw2 test.txt test1.txt test2.txt
+ 1887  vi LZW.cpp 
+ 1888  vi main.cpp 
+ 1889  make
+ 1890  ./hw2 test.txt test1.txt test2.txt
+ 1891  vi main.cpp 
+ 1892  ls
+ 1893  vi LZW.cpp 
+ 1894  make
+ 1895  ./hw2 test.txt test1.txt test2.txt
+ 1896  vi main.cpp 
+ 1897  make
+ 1898  ./hw2 test.txt test1.txt test2.txt
+ 1899  vi main.cpp 
+ 1900  make
+ 1901  ./hw2 test.txt test1.txt test2.txt
+ 1902  make
+ 1903  ./hw2 test.txt test1.txt test2.txt
+ 1904  vi main.cpp 
+ 1905  vi LZW.cpp 
+ 1906  make
+ 1907  ./hw2 test.txt test1.txt test2.txt
+ 1908  vi LZW.cpp 
+ 1909  ls
+ 1910  make clean
+ 1911  ls
+ 1912  rm test*
+ 1913  ls
+ 1914  vi core 
+ 1915  rm core 
+ 1916  ls
+ 1917  cd input/
+ 1918  ls
+ 1919  vi infile1.txt
+ 1920  mv infile.txt infile0.txt
+ 1921  ls
+ 1922  cd ..
+ 1923  ls
+ 1924  cd output/
+ 1925  ls
+ 1926  cd ..
+ 1927  ls
+ 1928  make
+ 1929  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 1930  vi LZW.cpp 
+ 1931  vi main.cpp 
+ 1932  make
+ 1933  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 1934  vi ./output/encoding1.txt 
+ 1935  ls
+ 1936  vi main.cpp 
+ 1937  make
+ 1938  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 1939  vi main.cpp 
+ 1940  vi LZW.hpp 
+ 1941  vi LZW.cpp 
+ 1942  vi Trie.cpp 
+ 1943  vi Trie.hpp 
+ 1944  vi Trie.cpp 
+ 1945  vi LZW.cpp 
+ 1946  make
+ 1947  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 1948  ls
+ 1949  objdump ./output/encoding1.txt 
+ 1950  hexdump 
+ 1951  hexdump ./output/encoding1.txt 
+ 1952  vi LZW.cpp 
+ 1953  vi ./output/encoding1.txt 
+ 1954  vi LZW.cpp 
+ 1955  make
+ 1956  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 1957  hexdump ./output/encoding1.txt 
+ 1958  cat ./output/encoding1.txt 
+ 1959  vi ./output/encoding1.txt 
+ 1960  vi LZW.cpp 
+ 1961  make
+ 1962  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 1963  vi ./output/encoding1.txt 
+ 1964  hexdump ./output/encoding1.txt 
+ 1965  vi ./input/infile1.txt 
+ 1966  vi LZW.cpp 
+ 1967  vi main.cpp 
+ 1968  vi LZW.cpp 
+ 1969  ls
+ 1970  cd Git/
+ 1971  ls
+ 1972  cd Coursework/
+ 1973  ls
+ 1974  cd TheoryOfComputation/
+ 1975  ls
+ 1976  cd hw02/
+ 1977  ls
+ 1978  ls -al
+ 1979  rm .LZW.cpp.swp 
+ 1980  ls
+ 1981  make clean
+ 1982  ls
+ 1983  ls -al
+ 1984  vi LZW.cpp 
+ 1985  make
+ 1986  vi Trie.hpp 
+ 1987  vi Trie.cpp 
+ 1988  vi LZW.cpp 
+ 1989  make
+ 1990  vi Trie.hpp 
+ 1991  make
+ 1992  make clean
+ 1993* 
+ 1994  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 1995  vi ./output/encoding1.txt 
+ 1996  hexdump ./output/encoding1.txt 
+ 1997  vi LZW.cpp 
+ 1998  ls
+ 1999  history
+ 2000  history | grep "-w"
+ 2001  history | grep '-w'
+ 2002  history | grep 'w10'
+ 2003  fold -s -w5 Trie.cpp 
+ 2004  ls
+ 2005  make clean
+ 2006  hexdump output/encoding1.txt 
+ 2007  vi LZW.cpp 
+ 2008  make
+ 2009  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2010  vi ./output/encoding1.txt 
+ 2011  vi ./input/infile1.txt 
+ 2012  vi ./output/encoding1.txt 
+ 2013  vi Trie.cpp 
+ 2014  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2015  hexdump ./output/encoding1.txt 
+ 2016  hexdump -C ./output/encoding1.txt 
+ 2017  vi ./input/infile1.txt 
+ 2018  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2019  hexdump -C ./output/encoding1.txt 
+ 2020  hexdump -C ./input/infile1.txt 
+ 2021  hexdump -C ./input/infile0.txt 
+ 2022  vi ./input/infile0.txt 
+ 2023  ls
+ 2024  make clean
+ 2025  ls
+ 2026  vi input/infile1.txt 
+ 2027  vi LZW.cpp 
+ 2028  make
+ 2029  make clean
+ 2030  ls
+ 2031  make
+ 2032  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2033  vi ./output/encoding1.txt 
+ 2034  vi LZW.cpp 
+ 2035  hexdump -C ./output/encoding1.txt 
+ 2036  vi LZW.cpp 
+ 2037  make
+ 2038  vi LZW.cpp 
+ 2039  make
+ 2040  make clean
+ 2041  ls
+ 2042  vi LZW.cpp 
+ 2043  make
+ 2044  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2045  hexdump -C output/encoding1.txt 
+ 2046  vi LZW.cpp 
+ 2047  ls
+ 2048  make clean
+ 2049  ls
+ 2050  vi main.cpp 
+ 2051  vi LZW.cpp 
+ 2052  ls
+ 2053  make
+ 2054  vi Trie.hpp 
+ 2055  make
+ 2056  make clean
+ 2057  make
+ 2058  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2059  vi LZW.cpp 
+ 2060  make
+ 2061  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2062  vi LZW.cpp 
+ 2063  ls
+ 2064  cd input/
+ 2065  ls
+ 2066  ls -al
+ 2067  ls
+ 2068  cd ..
+ 2069  ls
+ 2070  cd make
+ 2071  make clean
+ 2072  ls
+ 2073  vi LZW.cpp 
+ 2074  ls
+ 2075  make
+ 2076  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2077  hexdump -C output/encoding1.txt 
+ 2078  vi LZW.cpp 
+ 2079  make
+ 2080  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2081  vi LZW.cpp 
+ 2082  vi Trie.cpp 
+ 2083  make
+ 2084  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2085  vi output/decoding1.txt 
+ 2086  vi LZW.cpp 
+ 2087  make
+ 2088  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2089  vi LZW.cpp 
+ 2090  vi Trie.cpp 
+ 2091  vi LZW.cpp 
+ 2092  vi Trie.cpp 
+ 2093  make
+ 2094  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2095  vi Trie.cpp 
+ 2096  make
+ 2097  vi Trie.cpp 
+ 2098  make
+ 2099  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2100  vi Trie.cpp 
+ 2101  hexdump -C ./output/encoding1.txt 
+ 2102  vi LZW.cpp 
+ 2103  make
+ 2104  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2105  vi LZW.cpp 
+ 2106  make
+ 2107  clear
+ 2108  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2109  vi Trie.cpp 
+ 2110  make
+ 2111  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2112  vi Trie.cpp 
+ 2113  make
+ 2114  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2115  vi LZW.cpp 
+ 2116  make
+ 2117  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2118  vi ./output/decoding1.txt 
+ 2119  LS
+ 2120  ls
+ 2121  make clean
+ 2122  ls
+ 2123  diff ./input/infile1.txt ./output/decoding1.txt 
+ 2124  ls
+ 2125  rm core 
+ 2126  ls
+ 2127  cd ..
+ 2128  ls
+ 2129  git add *
+ 2130  git commit -m "[TheoryOfComputation]hw02 - First commit"
+ 2131  git push origin master 
+ 2132  ls
+ 2133  cd hw02/
+ 2134  ls
+ 2135  vi Trie.hpp 
+ 2136  vi Trie.cpp 
+ 2137  vi LZW.cpp 
+ 2138  make
+ 2139  make clean
+ 2140  ls
+ 2141  make
+ 2142  ./hw2 input/infile1.txt output/encoding1.txt output/decoding1.txt
+ 2143  diff ./input/infile1.txt ./output/decoding1.txt 
+ 2144  ./hw2 input/infile0.txt output/encoding0.txt output/decoding0.txt
+ 2145  vi Trie.cpp 
+ 2146  ls
+ 2147  make clean
+ 2148  ls
+ 2149  vi Trie.cpp 
+ 2150  rm core 
+ 2151  ls
+ 2152  vi Trie.cpp 
+ 2153  vi LZW.cpp 
+ 2154  make
+ 2155  ./hw2 input/infile0.txt output/encoding0.txt output/decoding0.txt
+ 2156  vi LZW.cpp 
+ 2157  make
+ 2158  ./hw2 input/infile0.txt output/encoding0.txt output/decoding0.txt
+ 2159  vi LZW.cpp 
+ 2160  make
+ 2161  ./hw2 input/infile0.txt output/encoding0.txt output/decoding0.txt
+ 2162  vi LZW.cpp 
+ 2163  make
+ 2164  ./hw2 input/infile0.txt output/encoding0.txt output/decoding0.txt
+ 2165  vi ./input/infile0.txt 
+ 2166  ls
+ 2167  rm core 
+ 2168  ls
+ 2169  make clean
+ 2170  vi Trie.cpp 
+ 2171  vi LZW.cpp 
+ 2172  make
+ 2173  ./hw2 input/infile0.txt output/encoding0.txt output/decoding0.txt
+ 2174  vi LZW.cpp 
+ 2175  make
+ 2176  ./hw2 input/infile0.txt output/encoding0.txt output/decoding0.txt
+ 2177  vi LZW.cpp 
+ 2178  vi Trie.cpp 
+ 2179  make
+ 2180  ./hw2 input/infile0.txt output/encoding0.txt output/decoding0.txt
+ 2181  vi Trie.cpp 
+ 2182  make
+ 2183  ./hw2 input/infile0.txt output/encoding0.txt output/decoding0.txt
+ 2184  vi Trie.cpp 
+ 2185  vi LZW.cpp 
+ 2186  make
+ 2187  ./hw2 input/infile0.txt output/encoding0.txt output/decoding0.txt
+ 2188  vi LZW.cpp 
+ 2189  vi Trie.cpp 
+ 2190  vi Trie.hpp 
+ 2191  vi Types.hpp
+ 2192  vi main.cpp 
+ 2193  vi Trie.hpp
+ 2194  mv Trie.hpp Dict.hpp
+ 2195  vi Dict.hpp 
+ 2196  ls
+ 2197  make clean
+ 2198  mv Trie.cpp Dict.cpp
+ 2199  vi Dict.hpp 
+ 2200  vi M
+ 2201  vi main.cpp 
+ 2202  vi makefile 
+ 2203  go
+ 2204  vi makefile 
+ 2205  make
+ 2206  vi makefile 
+ 2207  make
+ 2208  make clean
+ 2209  ls
+ 2210  rm core 
+ 2211  ls
+ 2212  make
+ 2213  clear
+ 2214  make
+ 2215  vi Dict.hpp 
+ 2216  vi Dict.cpp 
+ 2217  make
+ 2218  clean
+ 2219  clear
+ 2220  make
+ 2221  vi Dict.hpp 
+ 2222  make
+ 2223  clear
+ 2224  make
+ 2225  vi Dict.cpp 
+ 2226  make
+ 2227  vi LZW.cpp 
+ 2228  make
+ 2229  make clean
+ 2230  make
+ 2231  ls
+ 2232  make clean
+ 2233  ls
+ 2234  make
+ 2235  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2236  vi ./output/encoding1.txt 
+ 2237  vi main.cpp 
+ 2238  vi LZW.cpp 
+ 2239  make
+ 2240  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2241  vi LZW.cpp 
+ 2242  vi Dict.cpp 
+ 2243  make
+ 2244  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2245  vi LZW.cpp 
+ 2246  vi Dict.cpp 
+ 2247  vi LZW.cpp 
+ 2248  vi Dict.cpp 
+ 2249  make
+ 2250  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2251  vi Dict.cpp 
+ 2252  vi LZW.cpp 
+ 2253  make
+ 2254  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2255  vi LZW.cpp 
+ 2256  vi Dict.cpp 
+ 2257  make
+ 2258  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2259  vi Dict.cpp 
+ 2260  make
+ 2261  make clean
+ 2262  make
+ 2263  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2264  vi Dict.cpp 
+ 2265  vi LZW.cpp 
+ 2266  make
+ 2267  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2268  vi LZW.cpp 
+ 2269  make
+ 2270  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2271  vi LZW.cpp 
+ 2272  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2273  vi LZW.cpp 
+ 2274  make
+ 2275  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2276  vi LZW.cpp 
+ 2277  make
+ 2278  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2279  vi LZW.cpp 
+ 2280  make
+ 2281  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2282  vi LZW.cpp 
+ 2283  make
+ 2284  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2285  make
+ 2286  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2287  vi LZW.cpp 
+ 2288  make
+ 2289  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2290  vi Dict.cpp 
+ 2291  vi LZW.cpp 
+ 2292  vi Dict.cpp 
+ 2293  make
+ 2294  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2295  vi Dict.cpp 
+ 2296  make
+ 2297  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2298  vi LZW.cpp 
+ 2299  vi Dict.cpp 
+ 2300  vi LZW.cpp 
+ 2301  ls
+ 2302  make clean
+ 2303  ls
+ 2304  rm core 
+ 2305  ls
+ 2306  make
+ 2307  ./go ./input/infile1.txt ./output/encoding1.txt ./output/decoding1.txt 
+ 2308  cat ./input/infile1.txt 
+ 2309  cat ./output/encoding1.txt 
+ 2310  cat ./output/decoding1.txt 
+ 2311  diff ./input/infile1.txt ./output/decoding1.txt 
+ 2312  ls
+ 2313  ./go ./input/infile0.txt ./output/encoding0.txt ./output/decoding0.txt 
+ 2314  ls
+ 2315  cd output/
+ 2316  ls
+ 2317  vi encoding0.txt 
+ 2318  vi decoding0.txt 
+ 2319  cd ..
+ 2320  ls
+ 2321  diff ./input/infile0.txt ./output/decoding0.txt 
+ 2322  vi LZW.cpp 
+ 2323  make
+ 2324  make clean
+ 2325  ls
+ 2326  ./go ./input/infile0.txt ./output/encoding0.txt ./output/decoding0.txt 
+ 2327  make
+ 2328  ./go ./input/infile0.txt ./output/encoding0.txt ./output/decoding0.txt 
+ 2329  vi ./output/decoding0.txt 
+ 2330  diff ./input/infile0.txt ./output/decoding0.txt 
+ 2331  vi ./input/infile0.txt 
+ 2332  mv ./input/infile.txt ./input/infile2.txt
+ 2333  ./go ./input/infile2.txt ./output/encoding2.txt ./output/decoding2.txt 
+ 2334  vi ./input/infile2.txt 
+ 2335  ls
+ 2336  make clean
+ 2337  ls
+ 2338  cd input/
+ 2339  ls
+ 2340  rm infile2.txt 
+ 2341  ls
+ 2342  cd ..
+ 2343  ls
+ 2344  cd output/
+ 2345  ls
+ 2346  rm *.txt
+ 2347  cd ../input/
+ 2348  ls
+ 2349  rm infile0.txt 
+ 2350  mv infile.txt infile0.txt
+ 2351  ls
+ 2352  cd ..
+ 2353  ls
+ 2354  make
+ 2355  rm core 
+ 2356  ls
+ 2357  ./go ./input/infile0.txt ./output/encoding0.txt ./output/decoding0.txt 
+ 2358  vi ./output/decoding0.txt 
+ 2359  ls
+ 2360  vi LZW.cpp 
+ 2361  vi Dict.cpp 
+ 2362  ls
+ 2363  vi Dict.
+ 2364  vi Dict.cpp 
+ 2365  ls
+ 2366  cd output/
+ 2367  ls
+ 2368  ls -al
+ 2369  cd ..
+ 2370  l;s
+ 2371  ls
+ 2372  make clean
+ 2373  ls
+ 2374  vi Dict.hpp 
+ 2375  ls
+ 2376  cd input/
+ 2377  ls
+ 2378  mv infile.txt infile2.txt
+ 2379  cd ..
+ 2380  ls
+ 2381  make
+ 2382  ./go ./input/infile2.txt ./output/encoding2.txt ./output/decoding2.txt 
+ 2383  ls
+ 2384  vi ./output/decoding2.txt 
+ 2385  ls
+ 2386  diff ./input/infile2.txt ./output/decoding2.txt 
+ 2387  vi ./input/infile2.txt 
+ 2388  diff ./input/infile2.txt ./output/decoding2.txt 
+ 2389  clear
+ 2390  diff ./input/infile2.txt ./output/decoding2.txt 
+ 2391  diff ./input/infile2.txt ./output/decoding2.txt > result.txt
+ 2392  vi result.txt 
+ 2393  ls
+ 2394  cd input/
+ 2395  ls
+ 2396  vi infile3.txt
+ 2397  cd ..
+ 2398  ls
+ 2399  ./go ./input/infile3.txt ./output/encoding3.txt ./output/decoding3.txt 
+ 2400  diff ./input/infile3.txt ./output/decoding3.txt 
+ 2401  vi ./input/infile3.txt 
+ 2402  ls
+ 2403  make clean
+ 2404  ls
+ 2405  vi LZW.cpp 
+ 2406  vi input/infile3.txt 
+ 2407  cd ..
+ 2408  cd hw02/
+ 2409  ls
+ 2410  make
+ 2411  ./go ./input/infile3.txt ./output/encoding3.txt ./output/decoding3.txt 
+ 2412  diff ./input/infile3.txt ./output/decoding3.txt 
+ 2413  vi ./input/infile3.txt 
+ 2414  ./go ./input/infile3.txt ./output/encoding3.txt ./output/decoding3.txt 
+ 2415  diff ./input/infile3.txt ./output/decoding3.txt 
+ 2416  vi ./input/infile3.txt 
+ 2417  ./go ./input/infile3.txt ./output/encoding3.txt ./output/decoding3.txt 
+ 2418  diff ./input/infile3.txt ./output/decoding3.txt 
+ 2419  vi ./output/decoding3.txt 
+ 2420  vi input/infile3.txt 
+ 2421  ./go ./input/infile3.txt ./output/encoding3.txt ./output/decoding3.txt 
+ 2422  vi input/infile3.txt 
+ 2423  diff ./input/infile3.txt ./output/decoding3.txt 
+ 2424  vi input/infile3.txt 
+ 2425  ./go ./input/infile3.txt ./output/encoding3.txt ./output/decoding3.txt 
+ 2426  diff ./input/infile3.txt ./output/decoding3.txt 
+ 2427  vi ./input/infile2.txt 
+ 2428  clear
+ 2429  ./go ./input/infile2.txt ./output/encoding2.txt ./output/decoding2.txt 
+ 2430  vi ./output/decoding2.txt 
+ 2431  diff ./input/infile2.txt ./output/decoding2.txt 
+ 2432  diff ./input/infile2.txt ./output/decoding2.txt > result.txt 
+ 2433  vi result.txt 
+ 2434  vi ./input/infile3.txt 
+ 2435  ./go ./input/infile3.txt ./output/encoding3.txt ./output/decoding3.txt 
+ 2436  diff ./input/infile3.txt ./output/decoding3.txt 
+ 2437  ls
+ 2438  rm result.txt 
+ 2439  ls
+ 2440  make clean
+ 2441  ls
+ 2442  git add *
+ 2443  ls
+ 2444  cd ..
+ 2445  ls
+ 2446  git add *
+ 2447  git add --all
+ 2448  git commit -m "[TheoryOfComputation]hw02 - Lossy Compression"
+ 2449  git push origin master 
+ 2450  ls
+ 2451  cd hw02/
+ 2452  ls
+ 2453  cd input/
+ 2454  ls
+ 2455  rm *.txt
+ 2456  ls
+ 2457  cd ..
+ 2458  ls
+ 2459  cd output/
+ 2460  ls
+ 2461  rm *.txt
+ 2462  ls
+ 2463  cd ..
+ 2464  ls
+ 2465  cd input/
+ 2466  ls
+ 2467  vi test.txt
+ 2468  cd ..
+ 2469  ls
+ 2470  make
+ 2471  ./go ./input/test.txt ./output/encode.txt ./output/decode.txt
+ 2472  diff ./input/test.txt ./output/decode.txt 
+ 2473  vi ./input/test.txt 
+ 2474  hexdump -C ./output/encode.txt 
+ 2475  ls
+ 2476  vi LZW.cpp 
+ 2477  vu Dict.cpp 
+ 2478  vi Dict.cpp 
+ 2479  make
+ 2480  vi Dict.cpp 
+ 2481  ./go ./input/test.txt ./output/encode.txt ./output/decode.txt
+ 2482  diff ./input/test.txt ./output/decode.txt 
+ 2483  ls
+ 2484  vi Dict.cpp 
+ 2485  vi LZW.cpp 
+ 2486  vi Dict.cpp 
+ 2487  vi LZW.cpp 
+ 2488  make
+ 2489  ./go ./input/test.txt ./output/encode.txt ./output/decode.txt
+ 2490  vi LZW.cpp 
+ 2491  cat ./output/decode.txt 
+ 2492  vi LZW.cpp 
+ 2493  make
+ 2494  ./go ./input/test.txt ./output/encode.txt ./output/decode.txt
+ 2495  vi LZW.cpp 
+ 2496  make
+ 2497  ./go ./input/test.txt ./output/encode.txt ./output/decode.txt
+ 2498  vi LZW.cpp 
+ 2499  vi Dict.cpp 
+ 2500  make
+ 2501  ./go ./input/test.txt ./output/encode.txt ./output/decode.txt
+ 2502  vi Dict.cpp 
+ 2503  make
+ 2504  ./go ./input/test.txt ./output/encode.txt ./output/decode.txt
+ 2505  ls
+ 2506  make clean
+ 2507  ls
+ 2508  vi Dict.cpp 
+ 2509  vi Dict.hpp 
+ 2510  vi Dict.cpp 
+ 2511  make
+ 2512  ./go ./input/test.txt ./output/encode.txt ./output/decode.txt
+ 2513  vi Dict.cpp 
+ 2514  vi LZW.cpp 
+ 2515  vi Dict.cpp 
+ 2516  make
+ 2517  ./go ./input/test.txt ./output/encode.txt ./output/decode.txt
+ 2518  vi Dict.cpp 
+ 2519  make
+ 2520  ./go ./input/test.txt ./output/encode.txt ./output/decode.txt
+ 2521  vi Dict.cpp 
+ 2522  make
+ 2523  ./go ./input/test.txt ./output/encode.txt ./output/decode.txt
+ 2524  vi Dict.cpp 
+ 2525  ./go ./input/test.txt ./output/encode.txt ./output/decode.txt
+ 2526  vi LZW.cpp 
+ 2527  make
+ 2528  ./go ./input/test.txt ./output/encode.txt ./output/decode.txt
+ 2529  cat ./output/decode.txt 
+ 2530  ls
+ 2531  make clean
+ 2532  make
+ 2533  ./input/
+ 2534  cd ./input/
+ 2535  ls
+ 2536  cd ..
+ 2537  ls
+ 2538  ./go ./input/infile.txt ./output/encode.txt ./output/decode.txt
+ 2539  vi ./output/decode.txt 
+ 2540  diff ./input/test.txt ./output/decode.txt 
+ 2541  diff ./input/infile.txt ./output/decode.txt 
+ 2542  cd ..
+ 2543  ls
+ 2544  git add --all
+ 2545  git commit -m "[TheoryOfComputation]hw02 - Done"
+ 2546  git push origin master 
+ 2547  ls
+ 2548  cd hw02/
+ 2549  ls
+ 2550  rm core 
+ 2551  ls
+ 2552  vi Dict.cpp 
+ 2553  make
+ 2554  ./go ./input/PrideAndPrejudice.txt ./output/encode_PrideAndPrejudice.txt ./output/decode_PrideAndPrejudice.txt
+ 2555* 
+ 2556  make
+ 2557  ./go ./input/PrideAndPrejudice.txt ./output/encode_PrideAndPrejudice.txt ./output/decode_PrideAndPrejudice.txt
+ 2558  vi Dict.cpp 
+ 2559  make
+ 2560  ./go ./input/PrideAndPrejudice.txt ./output/encode_PrideAndPrejudice.txt ./output/decode_PrideAndPrejudice.txt
+ 2561  vi ./input/PrideAndPrejudice.txt 
+ 2562  hexdump -C ./input/PrideAndPrejudice.txt 
+ 2563  ./go ./input/PrideAndPrejudice.txt ./output/encode_PrideAndPrejudice.txt ./output/decode_PrideAndPrejudice.txt
+ 2564  vi ./input/PrideAndPrejudice.txt 
+ 2565  vi Dict.cpp 
+ 2566  cd input/
+ 2567  ls
+ 2568  cp PrideAndPrejudice.txt PAP.txt
+ 2569  vi PAP.txt 
+ 2570* 
+ 2571  make
+ 2572  ./go ./input/PAP.txt ./output/encode_PAP.txt ./output/decode_PAP.txt
+ 2573  cd input/
+ 2574  ls
+ 2575  history > history.txt
+ 2576  cd ..
+ 2577  ls
+ 2578  ./go ./input/history.txt ./output/encode_history.txt ./output/decode_history.txt
+ 2579  `
+ 2580  ./go ./input/history.txt ./output/encode_history.txt ./output/decode_history.txt
+ 2581  vi Dict.cpp 
+ 2582  history > ./input/history.txt 

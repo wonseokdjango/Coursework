@@ -25,8 +25,8 @@ int main(int argc, char* argv[])
   e = clock();
   elapsedDecomp = ((double)(e - s) / CLOCKS_PER_SEC);
 
-  printf("Elapsed time for encoding : %.8lf (usec)\n", elapsedComp);
-  printf("Elapsed time for decoding : %.8lf (usec)\n", elapsedDecomp);
+  printf("Elapsed time for encoding : %.8lf (sec)\n", elapsedComp);
+  printf("Elapsed time for decoding : %.8lf (sec)\n", elapsedDecomp);
   
   return 0;
 }
