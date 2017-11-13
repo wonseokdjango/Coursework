@@ -1,71 +1,67 @@
+/**
+  *@File    LZW.cpp
+  *@Author  Wonseok Lee
+  *@Brief   Source for LZW class
+  */
+
 #include <cstdio>
 #include <iostream>
 
 #include "LZW.hpp"
-#include "Trie.hpp"
+#include "Dict.hpp"
 
 #define BUF_SIZE (256 * 1024 * 1024)
 
-char g_char_buffer[BUF_SIZE];
-unsigned short g_short_buffer[BUF_SIZE];
+s08t LZW::buffer08[BUF_SIZE];
+u16t LZW::buffer16[BUF_SIZE];
 
-void LZWCompression(const char* origin, const char* encoded)
+void LZW::LZWEnc(const char* fnameOrg, const char* fnameEnc)
 {
-  // load on buffer
-  FILE* fpOrigin = fopen(origin, "rb");
-  
-  int cnt = fread(g_char_buffer, sizeof(char), BUF_SIZE, fpOrigin);
-  g_char_buffer[cnt] = EOF;
+  // load origin on the buffer
+  FILE* fpOrg = fopen(fnameOrg, "rb");
+  s32t cnt = fread(buffer08, sizeof(s08t), BUF_SIZE, fpOrg);
+  buffer08[cnt] = EOF;
+  fclose(fpOrg);
 
-  fclose(fpOrigin);
+  // encode buffer and write it to file
+  FILE* fpEnc = fopen(fnameEnc, "wb");
 
-  // encode
-  FILE* fpEncoded = fopen(encoded, "wb");
+  u32t pos = 0;
+  Dict* dict = new Dict();
 
-  int pos = 0; 
-  Trie* trie = new Trie();
-
-  while (g_char_buffer[pos] != EOF)
+  while (buffer08[pos] != EOF)
   {
-    std::pair<int, int> ret = trie->longestPrefixEncode(g_char_buffer + pos);
-    
-    short buf = 0;
-    int upper = ((ret.second << 16) >> 24);
-    int lower = ((ret.second << 24) >> 24);
+    std::pair<u32t, u16t> ret = dict->encode(buffer08 + pos);
 
-    buf |= (((short)lower) << 0);
-    buf |= (((short)upper) << 8);
-
-    fwrite(&buf, sizeof(short), 1, fpEncoded);
-
+    fwrite(&ret.second, sizeof(u16t), 1, fpEnc);
     pos += ret.first;
   }
 
-  fclose(fpEncoded);
+  delete dict;
+
+  fclose(fpEnc);
 }
 
-void LZWDecompression(const char* encoded, const char* decoded)
+void LZW::LZWDec(const char* fnameEnc, const char* fnameDec)
 {
-  // load on buffer
-  FILE* fpEncoded = fopen(encoded, "rb");
-  
-  int cnt = fread(g_short_buffer, sizeof(short), BUF_SIZE, fpEncoded);
-  g_short_buffer[cnt] = EOF;
+  // load encoded file on the buffer
+  FILE* fpEnc = fopen(fnameEnc, "rb");
+  s32t cnt = fread(buffer16, sizeof(u16t), BUF_SIZE, fpEnc);
+  buffer16[cnt] = EOF;
+  fclose(fpEnc);
+ 
+  // decode buffer and write it to file
+  FILE* fpDec = fopen(fnameDec, "w");
 
-  fclose(fpEncoded);
+  Dict* dict = new Dict();
 
-  // decode
-  FILE* fpDecoded = fopen(decoded, "wb");
-
-  Trie* trie = new Trie();
-
-  for (int pos = 0; (short)g_short_buffer[pos] != EOF; ++pos)
+  for (u32t pos = 0; ((short)buffer16[pos]) != EOF; ++pos)
   {
-    printf("WONSEOK> HERE0 : %d\n", g_short_buffer[pos]);
-    std::string ret = trie->longestPrefixDecode(g_short_buffer + pos);
-    for (int idx = 0; idx < ret.size(); ++idx)
-      fwrite(&ret[idx], sizeof(char), 1, fpDecoded);
+    std::string ret = dict->decode(buffer16 + pos);  
+    fprintf(fpDec, "%s", ret.c_str());
   }
 
-  fclose(fpDecoded);
+  delete dict;
+
+  fclose(fpDec);
 }

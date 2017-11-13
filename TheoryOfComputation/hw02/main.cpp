@@ -1,3 +1,9 @@
+/**
+  *@File    main.cpp
+  *@Author  Wonseok Lee
+  *@Brief   Main for for LZW compression/decompression
+  */
+
 #include <cstdio>
 #include <time.h>
 
@@ -10,17 +16,17 @@ int main(int argc, char* argv[])
   double elapsedDecomp;
 
   s = clock();
-  LZWCompression(argv[1], argv[2]);
+  LZW::LZWEnc(argv[1], argv[2]);
   e = clock();
   elapsedComp = ((double)(e - s) / CLOCKS_PER_SEC);
   
   s = clock();
-  LZWDecompression(argv[2], argv[3]);
+  LZW::LZWDec(argv[2], argv[3]);
   e = clock();
   elapsedDecomp = ((double)(e - s) / CLOCKS_PER_SEC);
 
-  printf("Elapsed time for encoding : %.7lf (usec)\n", elapsedComp);
-  printf("Elapsed time for decoding : %.7lf (usec)\n", elapsedDecomp);
+  printf("Elapsed time for encoding : %.8lf (usec)\n", elapsedComp);
+  printf("Elapsed time for decoding : %.8lf (usec)\n", elapsedDecomp);
   
   return 0;
 }
