@@ -3,6 +3,9 @@ Lempel-Ziv-Welch Compression
 
 2017-21586 Wonseok Lee
 
+- NOTE
+  Input file format should be Unix-format. Please refer document.
+
 - Environment
   OS       : Ubuntu 14.04.5 LTS
   Language : C++
