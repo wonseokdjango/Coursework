@@ -79,7 +79,7 @@ LocationTable::LocationTable(std::vector<pat_t> _pattern)
   std::sort(_pattern.begin() + 1, _pattern.end(), pat_t::cmpValPosMax);
 
   std::stack<s64_t> maxStack;
-  for (int pos = 1; pos <= _pattern.size(); ++pos)
+  for (int pos = 1; pos < _pattern.size(); ++pos)
   {
     s64_t elem = _pattern[pos].pos;
 
@@ -98,7 +98,7 @@ LocationTable::LocationTable(std::vector<pat_t> _pattern)
   std::sort(_pattern.begin() + 1, _pattern.end(), pat_t::cmpValPosMin);
 
   std::stack<s64_t> minStack;
-  for (int pos = _pattern.size(); pos >= 1; --pos)
+  for (int pos = _pattern.size() - 1; pos >= 1; --pos)
   {
     s64_t elem = _pattern[pos].pos;
     while (!minStack.empty() && minStack.top() >= elem)
