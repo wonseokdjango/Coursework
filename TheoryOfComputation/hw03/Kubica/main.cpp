@@ -8,23 +8,30 @@
 #include <vector>
 #include <algorithm>
 
+#include <time.h>
+
 #include "common.hpp"
 
 static void readInput(char* _fname, std::vector<pat_t>& _p, std::vector<s64_t>& _t);
 
 int main(int argc, char* argv[])
 {
+  clock_t s, e;
+
   std::vector<pat_t> p;
   std::vector<s64_t> t;
 
   readInput(argv[1], p, t);
- 
+
+  FILE* fp = fopen(argv[2], "w");  
+  fprintf(fp, "ANSWER %lld %lld ", (s64_t)t.size() - 1, (s64_t)p.size() - 1);
+
+  s = clock();
+  
   LocationTable locationTable(p);
   OrderBordersTable orderBordersTable(p, locationTable);
  
   // KMP-ways.
-  printf("ANSWER\n");
-
   s64_t i = 0;
   s64_t j = 0;
   s64_t pSize = p.size() - 1;
@@ -49,13 +56,20 @@ int main(int argc, char* argv[])
     }
 
     if (j == pSize)
-      printf("%lld ", i + 1);
+      fprintf(fp, "%lld ", i + 1);
 
     i = i + (j - orderBordersTable.failure[j]);
     j = std::max<s64_t>(0, orderBordersTable.failure[j]);
   }
-  printf("\n");
-  
+  fprintf(fp, "\n");
+
+  e = clock();
+
+  double elapsed = ((double)(e - s) * 1000) / CLOCKS_PER_SEC;
+  printf("Elapsed %lld %lld : %.8lf (msec)\n", (s64_t)p.size() - 1, (s64_t)t.size() - 1, elapsed);
+
+  fclose(fp);
+
   return 0;
 }
 

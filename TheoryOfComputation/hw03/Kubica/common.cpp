@@ -111,16 +111,6 @@ LocationTable::LocationTable(std::vector<pat_t> _pattern)
 
     minStack.push(elem);
   }
-
-  printf("LMIN\n");
-  for (int i = 1; i < LMin.size(); ++i)
-    printf("%5lld ", LMin[i]);
-  printf("\n");
-
-  printf("LMAX\n");
-  for (int i = 1; i < LMax.size(); ++i)
-    printf("%5lld ", LMax[i]);
-  printf("\n");
 }
 
 /**
@@ -151,11 +141,4 @@ OrderBordersTable::OrderBordersTable(std::vector<pat_t>& _pattern, LocationTable
     }
     failure[i] = ++t;
   }
-
-  printf("ORDER-BORDER\n");
-  for (int i = 1; i < failure.size(); ++i)
-    printf("%5lld ", failure[i]);
-  printf("\n");
 }
-
-

@@ -12,12 +12,12 @@ int main(void)
   int pSize;
   int tSize;
 
-  for (tSize = 10000; tSize <= 100000; tSize += 10000)
+  for (tSize = 20000; tSize <= 1000000; tSize += 20000)
   {
-    for (pSize = 1000; pSize <= tSize; pSize += 1000)
+    for (pSize = 4; pSize <= 64; pSize += 4)
     {
       char buf[1024];
-      sprintf(buf, "Infile_T%d_P%d.txt", tSize, pSize);
+      sprintf(buf, "Infile-T%d-P%d.txt", tSize, pSize);
       FILE* fp = fopen(buf, "w");
 
       fprintf(fp, "%d\n", pSize);
