@@ -78,6 +78,7 @@ LocationTable::LocationTable(std::vector<pat_t> _pattern)
   LMax.assign(_pattern.size(), 0);
   std::sort(_pattern.begin() + 1, _pattern.end(), pat_t::cmpValPosMax);
 
+  // O(|pattern size|) for all nearest smaller value
   std::stack<s64_t> maxStack;
   for (int pos = 1; pos < _pattern.size(); ++pos)
   {
@@ -97,6 +98,7 @@ LocationTable::LocationTable(std::vector<pat_t> _pattern)
   LMin.assign(_pattern.size(), 0);
   std::sort(_pattern.begin() + 1, _pattern.end(), pat_t::cmpValPosMin);
 
+  // O(|pattern size|) for all nearest smaller value
   std::stack<s64_t> minStack;
   for (int pos = _pattern.size() - 1; pos >= 1; --pos)
   {
@@ -111,6 +113,16 @@ LocationTable::LocationTable(std::vector<pat_t> _pattern)
 
     minStack.push(elem);
   }
+
+  printf("DBG > LMIN Table\n");
+  for (unsigned int idx = 1; idx < LMin.size(); ++idx)
+    printf("%5lld ", LMin[idx]);
+  printf("\n");
+  
+  printf("DBG > LMAX Table\n");
+  for (unsigned int idx = 1; idx < LMax.size(); ++idx)
+    printf("%5lld ", LMax[idx]);
+  printf("\n");
 }
 
 /**
@@ -121,6 +133,7 @@ OrderBordersTable::OrderBordersTable(std::vector<pat_t>& _pattern, LocationTable
   failure.assign(_pattern.size(), 0);
   failure[0] = -1;
 
+  // O(|pattern size|) for failure function as if it were a KMP
   s64_t t = -1;
   for (s64_t i = 1; i < _pattern.size(); ++i)
   {
@@ -141,4 +154,9 @@ OrderBordersTable::OrderBordersTable(std::vector<pat_t>& _pattern, LocationTable
     }
     failure[i] = ++t;
   }
+
+  printf("DBG > Order-Border Table\n");
+  for (unsigned int idx = 1; idx < failure.size(); ++idx)
+    printf("%5lld ", failure[idx]);
+  printf("\n");
 }

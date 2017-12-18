@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
   LocationTable locationTable(p);
   OrderBordersTable orderBordersTable(p, locationTable);
  
-  // KMP-ways.
+  // O(|pattern size| + |text size|) for KMP searching
   s64_t i = 0;
   s64_t j = 0;
   s64_t pSize = p.size() - 1;
@@ -58,6 +58,7 @@ int main(int argc, char* argv[])
     if (j == pSize)
       fprintf(fp, "%lld ", i + 1);
 
+    // KMP skip characters following failure function
     i = i + (j - orderBordersTable.failure[j]);
     j = std::max<s64_t>(0, orderBordersTable.failure[j]);
   }
